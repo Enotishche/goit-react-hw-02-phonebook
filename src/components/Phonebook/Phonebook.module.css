@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.contactBlock {
+  background-color: rgb(94, 195, 235);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.filter {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+h3,
+h4 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+label {
+  font-size: 20px;
+}
