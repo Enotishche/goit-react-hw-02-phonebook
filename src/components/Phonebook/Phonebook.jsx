@@ -46,7 +46,7 @@ class Phonebook extends Component {
   isDuplicate({ name, number }) {
     const { contacts } = this.state;
     const result = contacts.find(
-      item => item.name === name && item.number === number
+      item => item.name === name || item.number === number
     );
     return result;
   }
@@ -75,9 +75,11 @@ class Phonebook extends Component {
     const { addContact, removeContact, handleChange } = this;
     const { filter } = this.state;
     const contacts = this.getFilteredContacts();
+    const isContacts = contacts.length !== 0;
     return (
       <div className={styles.container}>
         <h2 className={styles.title}>Contacts</h2>
+
         <div className={styles.contactBlock}>
           <div>
             <FormAddContact onSubmit={addContact} />
@@ -94,6 +96,7 @@ class Phonebook extends Component {
             />
             <ContactList items={contacts} removeContact={removeContact} />
           </div>
+          {!isContacts && <p>There are no contacts yet</p>}
         </div>
       </div>
     );

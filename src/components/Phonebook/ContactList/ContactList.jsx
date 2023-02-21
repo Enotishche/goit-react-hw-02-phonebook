@@ -11,9 +11,11 @@ const ContactList = ({ items, removeContact }) => {
       </li>
     );
   });
+
   return (
     <>
       <h4 className={styles.title}>Contacts</h4>
+
       <ol>{elements}</ol>
     </>
   );
@@ -27,7 +29,7 @@ ContactList.propTypes = {
     propTypes.shape({
       id: propTypes.string.isRequired,
       name: propTypes.string.isRequired,
-      number: propTypes.number.isRequired,
+      number: propTypes.string.isRequired,
     })
   ),
 };
